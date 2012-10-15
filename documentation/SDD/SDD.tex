@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+
+\usepackage{times}
+\usepackage{amsmath, amssymb, multicol, graphicx}%pupr_paper,
+\usepackage{listing}
+\usepackage{verbatim}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage[parfill]{parskip}
+%\lstset{language=C++}
+\usepackage[colorlinks = true, linkcolor = blue]{hyperref}
+
+\setlength{\textwidth}{6.5in} \setlength{\textheight}{8.5in} \topmargin -0.3in \setlength{\rightmargin}{0.0in}
+\setlength{\leftmargin}{.0in} \setlength{\oddsidemargin}{.0in} \labelwidth=1.2in \labelsep=0.1in
+\parsep=0in
+\parindent=0in
+%\pagestyle{empty}
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+\begin{titlepage}
+%\maketitle
+ \centering
+ Polytechnic University of Puerto Rico\\
+ Hato Rey, Puerto Rico\\
+ Department of Electrical and Computer Engineering and Computer Sciences\\
+    \vspace*{15\baselineskip}
+    \large
+    \bfseries
+    Software Design Document \\
+    AIIPS Smart EyeSight\\
+    Version 1.0\\[3\baselineskip]
+    \normalfont
+     \vfill
+    Emanuel Rivera Castro 53502 \\
+    Yanilette Lopez Duprey 53990\\
+    Joaquin Pockels Balaguer 54012\\[2\baselineskip]
+
+    \textbf{\today} \\
+    COE 5002, FA-12\\
+    Prof. Luis Ortiz Ortiz\\[2\baselineskip]
+\end{titlepage}
+
+\pagenumbering{roman}
+\begin{table}[H]\centering
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Date & Version & Description & Author \\
+   \hline
+    & &  &  \\
+   \hline
+\end{tabular}
+\caption{Revision Table}
+\end{table}
+\pagebreak
+\tableofcontents
+\pagebreak
+\listoftables
+\pagebreak
+\listoffigures
+\clearpage\pagenumbering{arabic}
+
+\section{Introduction}
+
+\subsection{Purpose}
+The purpose of the Software Design Description (SDD) is to represent and/or model the AIIPS Smart EyeSight (AIIPS SE) with precise information needed for planning, analysis, and implementation. This includes the architectural features of the system down through details of what operations each code module will perform and the database layout. It also shows how the user cases define, in the SRS, will be implemented in the system. The SDD partitioned the system into design entities and describe the important properties and relationships among the entities.\\\\
+The design description model used to represent the software system will be expressed as a collection of design entities, each possessing properties and relationships. To simplify the model, the properties and relationships of each design entity are described by the standard set of attributes. A design description is complete when the attributes have been specified for all the entities.
+\subsection{Scope}
+
+AIIPS Smart EyeSight is mainly designed to efficiently and effectively extract specific features from a stream of images and classify them through a trained neural network.\\\\
+The scope of the application is: 
+\begin{itemize}
+  \item Extracts revelant features from images that an external agent sends.
+  \item Identify the image based on the PNN training.
+  \item Design the software with future performance improvements in mind.
+  \item Develop a software that interconnects with the other sub-systems of the DARPA Proposal.
+\end{itemize}
+
+\subsection{Definitions and Acronyms}
+This subsection shall define, or provide references to the definition of all terms and acronyms required to properly interpreted the SPMP.
+\begin{table}[H]\centering
+\begin{tabular}{|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Term & Definition \\
+   \hline
+   The Company & AIIPS \\
+   \hline
+   Software & AIIPS Smart EyeSight\\
+   \hline
+   Proposal & DARPA Proposal\\
+   \hline
+\end{tabular}
+\caption{Definitions}
+\end{table}
+
+\begin{table}[H]\centering
+\begin{tabular}{|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Term & Acronym \\
+   \hline
+   AIIPS & Artificial Intelligence and Image Processing/Segmentation   \\
+    \hline
+    PNN & Probabilistic Neural Network \\
+    \hline
+  Defense Advanced Research Projects Agency  & DARPA \\
+   \hline
+  Software Requirements Specification & SRS \\
+   \hline
+    Software Project Management Plan & SPMP \\
+   \hline
+     Software Test Document & STD \\
+   \hline
+     Software Design Description & SDD \\
+     \hline
+     Institute of Electrical and Electronics Engineers & IEEE\\
+   \hline
+\end{tabular}
+\caption{Acronyms}
+\end{table}
+\end{document}

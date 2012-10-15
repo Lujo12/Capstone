@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+
+\usepackage{times}
+\usepackage{amsmath, amssymb, multicol, graphicx}%pupr_paper,
+\usepackage{listing}
+\usepackage{verbatim}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage[parfill]{parskip}
+%\lstset{language=C++}
+\usepackage[colorlinks = true, linkcolor = blue]{hyperref}
+
+\setlength{\textwidth}{6.5in} \setlength{\textheight}{8.5in} \topmargin -0.3in \setlength{\rightmargin}{0.0in}
+\setlength{\leftmargin}{.0in} \setlength{\oddsidemargin}{.0in} \labelwidth=1.2in \labelsep=0.1in
+\parsep=0in
+\parindent=0in
+%\pagestyle{empty}
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+\begin{titlepage}
+%\maketitle
+ \centering
+ Polytechnic University of Puerto Rico\\
+ Hato Ret, Puerto Rico\\
+ Department of Electrical and Computer Engineering and Computer Sciences\\
+    \vspace*{15\baselineskip}
+    \large
+    \bfseries
+    Software Testing Documentation   \\
+    AIIPS Smart Ice\\
+    Version 1.0\\[3\baselineskip]
+    \normalfont
+     \vfill
+    Emanuel Rivera Castro 53502 \\
+    Yanilette Lopez Duprey 53990\\
+    Joaquin Pockels Balaguer 54012\\[2\baselineskip]
+
+    \textbf{\today} \\
+    COE 5002, FA-12\\
+    Prof. Luis Ortiz Ortiz\\[2\baselineskip]
+\end{titlepage}
+
+\pagenumbering{roman}
+\begin{table}[H]\centering
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Date & Version & Description & Author \\
+   \hline
+   10/03/2012 & 1.0 & First Draft & Yanilette Lopez Duprey \\
+   \hline
+\end{tabular}
+\caption{Revision Table}
+\end{table}
+\pagebreak
+\tableofcontents
+\pagebreak
+\listoftables
+\pagebreak
+\clearpage\pagenumbering{arabic}
+
+\section{Introduction}
+\subsection{Purpose}
+ 
+ The purpose of the Software Testing Documentation (STD) is to describe the executions of procedures and code. The STD can facilitate communication by providing a common frame of reference (e.g., a customer and a supplier have the same definition for a test plan).  This document can serve as a complete checklist for the associated testing process. . In many organizations, the use of these documents significantly increases the manageability of testing. Increased manageability results from the greatly increased visibility of each phase of the testing process.
+ 
+ 
+
+\subsection{Scope}
+
+This document will explain the methods used to text each of the procedures necessary to fulfill the requirements described for Artificial Intelligence Image Processing Segmentation (AIIP/S) in the Software Requirements Specifications (SRS) document for our software Smart Ice. These procedures are explained in detail in the Software Design Description (SDD) document. The procedures that will be tested in this document are:
+
+\begin{itemize}
+  \item Probabilistic Neural Network (PNN)
+  \item Image Segmentation (IS)
+\end{itemize}
+
+The methods that are going to be used to test each of the procedures and/or functions mentioned above are:
+\begin{itemize}
+  \item Unit Test 
+    \begin{itemize}
+  \item Black Box
+  \item White Box
+    \end{itemize}
+  \item Integration Test
+   \begin{itemize}
+  \item Bottom-Up
+  \item Top-Down
+  \item Sandwich 
+    \end{itemize}
+\end{itemize}
+
+\subsection{Definitions and Acronyms}
+This subsection shall define, or provide references to the definition of all terms and acronyms required to properly interpreted the SPMP.
+\begin{table}[H]\centering
+\begin{tabular}{|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Term & Definition \\
+   \hline
+   Software & Smart Ice code\\
+   \hline
+\end{tabular}
+\caption{Definitions}
+\end{table}
+
+\begin{table}[H]\centering
+\begin{tabular}{|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Term & Acronym \\
+   \hline
+   AIIPS & Artificial Intelligence and Image Processing/Segmentation   \\
+    \hline
+    PNN & Probabilistic Neural Network \\
+    \hline
+  Defense Advanced Research Projects Agency  & DARPA \\
+   \hline
+  Software Requirements Specification & SRS \\
+   \hline
+     Software Test Document & STD \\
+   \hline
+     Software Design Description & SDD \\
+     \hline
+     Institute of Electrical and Electronics Engineers & IEEE\\
+   \hline
+\end{tabular}
+\caption{Acronyms}
+\end{table}
+
+\subsection{References}
+IEE Std 610.12-1990, IEEE Standard Glossary of Software Engineering Terminology.
+
+\section{Equipment}
+The software Smart Ice has the functionality of receive an image then the image is segment and classified and produces an output as was explained in the SRS. These two functions that were mentioned on the scope (section 1.2) will need to be test:
+
+\begin{itemize}
+  \item 150 images with different histogram colors and forms. 
+\end{itemize}
+
+\section{Test Plan}
+The test plan is necessary in order to archive a better “life” for the product. This plan will detail which test would be done as follow: 
+
+\begin{table}[H]\centering
+\begin{tabular}{|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    System Function & Test \\
+   \hline
+   Image Segmentation  & \\
+   \hline
+    Image Classification  & \\
+   \hline
+\end{tabular}
+\caption{Definitions}
+\end{table}
+
+
+\end{document}
