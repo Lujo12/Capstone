@@ -253,7 +253,7 @@ AIIPS is compose of 3 members, each with a main position in the team, primary an
   \includegraphics[width=6.0in]{org_diagram}\\
   \caption{Organizational Diagram}\label{org_diagram}
   \end{figure}
-  
+
 Decisions within the Company are handled through voting. The changes must be discussed by the group, after which a debate will take place to find the advantages and disadvantages. Finally, the group will vote and majority decided whether the change will take place. Each meeting will be documented in the weekly report.\\\\
 Communication between group members will consist of phone calls, text messages and meetings. Generally, meetings take place every Wednesday at 1:30pm with additional meetings taking place during whenever the group decides is necessary.
 
@@ -355,7 +355,7 @@ This section is divided in the following subsections:
 \begin{itemize}
   \item Management objectives and priorities
   \item Project assumptions, dependencies and constraints
-  \item Risk management techniques 
+  \item Risk management techniques
   \item Monitoring and controlling mechanisms to be used
   \item Staffing Plan
 \end{itemize}
@@ -367,7 +367,7 @@ This section contains the philosophy, goals and priorities on management activit
 The philosophy adopted for the management of activities is: divide and conquer. The group will usually meet; either physically or via other means of communication, such as, internet conference calls using Skype or phone calls. Afterwards, the activity is discussed by the members and decomposed into essential parts or tasks required for the activity completion which are then assigned to the corresponding member.
 
 \subsubsection{Goals}
-The goals are simply to be able to fulfill the objectives of this stage of the Proposal and writing each document as fast as possible so we can have feedback from our client, review, audit and proceed to the next activity. 
+The goals are simply to be able to fulfill the objectives of this stage of the Proposal and writing each document as fast as possible so we can have feedback from our client, review, audit and proceed to the next activity.
 
 \subsubsection{Priorities}
 The priorities on an activity may vary on the difficulty and/or length of the activity. The order established for the main activity priorities are the following:
@@ -375,7 +375,7 @@ The priorities on an activity may vary on the difficulty and/or length of the ac
 \begin{enumerate}
   \item Documenting the plan (SPMP) and the requirements (SRS) of the Project.
   \item Documenting the design (SDD) and testing methods (STD) of the Project.
-  \item Work on AIIPS Software.
+  \item Work on AIIPS Smart EyeSight. 
   \item Meet with our client for feedback.
 \end{enumerate}
 
@@ -402,7 +402,7 @@ The proper format to deliver a statement which states the intention of acquiring
 
 \subsection{Assumptions, Dependencies and Constraints}
 This section will contain the following information:
- 
+
  \begin{itemize}
    \item The necessary assumptions on which the project is based.
    \item External events the project is dependent upon in order to be completed.
@@ -413,10 +413,9 @@ This section will contain the following information:
 The assumptions for this project are the following:
 
 \begin{enumerate}
-  \item The client already had design a complete robot/agent that captures video and audio.
-  \item The client already had design the communication protocol to send the image and video.
-  \item The client already had design the process/algorithm to take the video and divide it in frames/images.
-  \item The staff assigned to system maintenance have knowledge of a PNN.
+  \item AIIPS will not design the external agent that will capture the video and audio. The client needs the agent that will capture the video and audio.
+  \item AIIPS will not design the communication protocol to send the video. The client needs to have the communication protocol to send the video.
+  \item AIIPS will not design the process/algorithm to "change" the video into frames/images. The client need to have the process/algorithm to take the video and divide it in frames/images.
 \end{enumerate}
 \subsubsection{Dependencies}
 Most of the dependencies of external events the project will be dependent upon will be due the completion of the project documentations. For example SDD and STD documents will be dependent on the completion of the SRS and SPMP documentations in order for their completion to be successful. Other dependencies would be the feedback from our client that may change/alter the code and/or documents.
@@ -442,21 +441,14 @@ This subsection identify and assess the risk factors associated with the project
 \subsubsection{Risks regarding consumer acceptance of the product}
       Examples would be the customer may not express the desired resulting product correctly and mid development forces the staff member to redo most of the currently developed product on the project. Another example would be additional requests from the customer that may require drastic changes on the currently developed product.  Finally a risk example would be that the final product doesn’t comply with the requirements and constraints given by the client resulting in customer’s dissatisfaction, termination of the contract, revenue loss, loss of the company’s reputation, company bankruptcy and other undesired situations.
 
-\subsection{Monitoring and Controlling Mechanisms}
-This section would briefly contain information about flow of information and controlling and auditing mechanisms as well as tools used in order to aid this task. These all apply to all the work packages regarding this project.
-\begin{itemize}
-  \item \textbf{Flow of Information}\\\\
-  Most of the information regarding the project is being kept digitally in documents stored as data on computers. Also information may flow via personal means or telecommunication tools such as cell phones, text messages, Skype conference calls , Dropbox  and GitHub Repository.
-  \item \textbf{Review and Audit Mechanisms}\\\\
-  The member assigned to each document will open and review the work done on the documentation using Dropbox or GitHub. We are going to use Latex to edit and modify each document. If changes are necessary to a current work done in order to comply with the requirements, constraints and IEEE standards, the editor will notify the staff member responsible of the work in question the necessary changes via any of the mentioned tools in Flow of Information. If necessary and the editor in chief has the required skill and preparation, he may do the corresponding modifications to the work under review and audit.
-  \item The tools used for Monitoring and controlling mechanisms are the following:
-      \begin{enumerate}
-        \item Dropbox
-        \item GitHub
-        \item WinEdt 7(Latex)
-        \item Emacs (for Latex)
-      \end{enumerate}
-\end{itemize}
+\subsection{Monitoring and Controlling Mechanisms} 
+Process to request a change in the document:
+\begin{enumerate}
+  \item Client, Users and/or Developer(AIIPS member) request a change in a document after reviewing it.
+  \item The member assigned to that particular document makes the changes necessary to comply with the change request using WinEdt 7 or Emacs. The responsibility to makes the changes can be given to another member if there is a valid reason. (sickness, minor changes, education, family)
+  \item The member assigned to that particular document uploads the document to GitHub and DropBox, this keeps each member informed about the documentation progress.
+\end{enumerate}
+For more information about each member responsibilities go to section 2.2 and 2.4
 
 \subsection{Staffing Plan}
 The Project can be developed with a small group consisting of three (3) members. They, however, have to meet the following requirements:
@@ -515,7 +507,12 @@ The standardized test document can facilitate communication by providing a commo
 The software design description is a representation of a software system that is used as a medium for communicating software design information. A representation of a software system is created to facilitate analysis, planning, implementation, and decision making.
 
 \subsection{Project Support Functions}
-For the first year after delivery, the software will receive software updates monthly if needed. After the first year the updates will be reduced to three for the year, every four months, before reaching the plateau at one every 6 months. The combination of routine maintenance and the updates are part of the quality assurance that guarantees that the system will work more efficiently.
+Updates for Smart EyeSight will be periodically every month for the first year after launch. After the first year updates will be make every four (4) months and after the second year, every six (6) months. Only a client request for an update can change the establish time. After each update AIIPS will test the software and write a detail report of the changes to Smart EyeSight. Then the software, with the updates, will be implemented back in the system. The following figure (\ref{support} shows the procedure to deliver an update.
+
+\begin{figure}[H]\centering
+  \includegraphics[width=6.0in]{project_support}\\
+  \caption{Block Diagram of the Process to maintain and deliver updates to Smart EyeSight}\label{support}
+  \end{figure}
 
 \section{Work Packages, Schedule, and Budget}
 This section specify the work packages, identify the dependency relationships among them, state the resource requirements, provide allocation of budget and resources to work packages, and establish a project schedule. This section is divided in the following subsections:
@@ -528,13 +525,13 @@ This section specify the work packages, identify the dependency relationships am
 \end{itemize}
 
 \subsection{Work Packages}
-In order to complete the project agreement, the client must receive the four (4) documents detailed in the Software Documentation section (4.2) in addition to the complete version of the AIIPS Software.
+In order to complete the project agreement, the client will receive four (4) documents described in the Software Documentation section (4.2) and in the following 3-4 months a working code of Smart EyeSight.
 
 \subsection{Dependencies}
 The dependencies for these work packages are detailed in Figure \ref{dependencies}.
 
 \begin{figure}[H]\centering
-  \includegraphics[width=6.0in]{dependencies}\\
+  \includegraphics[width=4.372in]{dependencies}\\
   \caption{Block Diagram of the Dependencies of our Project}\label{dependencies}
   \end{figure}
 
@@ -543,7 +540,7 @@ Please see section 4.1 for the Resources/Tools needed for the completion of this
 
 \subsection{Budget and Resource Allocation}
 \begin{table}[H]\centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{3.5cm}|}
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   Items & Quantity & Amount & Total\\
@@ -564,7 +561,7 @@ Please see section 4.1 for the Resources/Tools needed for the completion of this
 \end{table}
 
 \begin{table}[H]\centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{3.5cm}|}
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   Personnel  & Months & Amount(Per Month) & Total\\
@@ -583,7 +580,7 @@ Please see section 4.1 for the Resources/Tools needed for the completion of this
 \end{table}
 
 \begin{table}[H]\centering
-\begin{tabular}{|c|c|}
+\begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   Resources  & Total\\
