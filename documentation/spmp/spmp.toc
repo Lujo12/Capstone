@@ -1,0 +1,49 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Project Overview}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Project Deliverables}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Evolution of the SPMP}{2}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Updating the SPMP}{2}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Document Version}{3}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}Tools}{3}{subsubsection.1.3.3}
+\contentsline {subsection}{\numberline {1.4}Reference Material}{3}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}IEEE Documents}{3}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Papers}{4}{subsubsection.1.4.2}
+\contentsline {subsubsection}{\numberline {1.4.3}Books}{4}{subsubsection.1.4.3}
+\contentsline {subsection}{\numberline {1.5}Definitions and Acronyms}{4}{subsection.1.5}
+\contentsline {section}{\numberline {2}Project Organization}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Process Model}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Organizational Structure}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Organizational Boundaries and Interfaces}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Project Responsibilities}{7}{subsection.2.4}
+\contentsline {section}{\numberline {3}Managerial Processes}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Management Objectives and Priorities}{9}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Philosophy}{9}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Goals}{10}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Priorities}{10}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Project Budget Priorities}{10}{subsubsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.5}Risk Management Procedures}{10}{subsubsection.3.1.5}
+\contentsline {subsubsection}{\numberline {3.1.6}Software Acquisition Statement Management}{11}{subsubsection.3.1.6}
+\contentsline {subsection}{\numberline {3.2}Assumptions, Dependencies and Constraints}{11}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Assumptions}{11}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Dependencies}{11}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Constraints}{12}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Risk Management}{12}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Risk regarding contract}{12}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Risk regarding technology related on the project}{12}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Risk regarding consumer acceptance of the product}{12}{subsubsection.3.3.3}
+\contentsline {subsection}{\numberline {3.4}Monitoring and Controlling Mechanisms}{13}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Staffing Plan}{13}{subsection.3.5}
+\contentsline {section}{\numberline {4}Technical Process}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Methods, Tools, and Techniques}{14}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Software Documentation}{14}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Software Project Management Plan}{14}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Software Requirements Specification}{15}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Software Test Document}{15}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Software Design Description}{15}{subsubsection.4.2.4}
+\contentsline {subsection}{\numberline {4.3}Project Support Functions}{15}{subsection.4.3}
+\contentsline {section}{\numberline {5}Work Packages, Schedule, and Budget}{16}{section.5}
+\contentsline {subsection}{\numberline {5.1}Work Packages}{16}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Dependencies}{16}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Resource Requirements}{17}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Budget and Resource Allocation}{17}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Schedule}{17}{subsection.5.5}

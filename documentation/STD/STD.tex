@@ -1,13 +1,15 @@
 \documentclass[12pt]{article}
 
 \usepackage{times}
-\usepackage{amsmath, amssymb, multicol, graphicx}%pupr_paper,
+\usepackage{amsmath, amssymb, multicol, graphicx}
 \usepackage{listing}
 \usepackage{verbatim}
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage[parfill]{parskip}
-%\lstset{language=C++}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{pdfpages}
 \usepackage[colorlinks = true, linkcolor = blue]{hyperref}
 
 \setlength{\textwidth}{6.5in} \setlength{\textheight}{8.5in} \topmargin -0.3in \setlength{\rightmargin}{0.0in}
@@ -16,23 +18,34 @@
 \parindent=0in
 %\pagestyle{empty}
 \setcounter{secnumdepth}{3}
+\synctex=1
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+  #1\ignorespaces
+}
 
 \begin{document}
+%\clearpage\pagenumbering{roman}
 \begin{titlepage}
+%\clearpage\pagenumbering{roman}
 %\maketitle
  \centering
  Polytechnic University of Puerto Rico\\
  Hato Rey, Puerto Rico\\
  Department of Electrical and Computer Engineering and Computer Sciences\\
-    \vspace*{15\baselineskip}
+    \vspace*{10\baselineskip}
     \large
     \bfseries
-    Software Testing Documentation   \\
-    AIIPS Smart EyeSight\\
-    Version 1.0\\[3\baselineskip]
+    Software Project Management Plans  \\
+    AIIP/S Smart EyeSight\\
+    Version 2.0\\[2\baselineskip]
+     \begin{figure}[H]\centering
+  \includegraphics[width=2in,height=2in]{aippsLogo_official}\\
+  \end{figure}
     \normalfont
      \vfill
-    Emanuel Rivera Castro 53502 \\
+    Emanuel Rivera Castro 53502\\
     Yanilette Lopez Duprey 53990\\
     Joaquin Pockels Balaguer 54012\\[2\baselineskip]
 
@@ -41,25 +54,28 @@
     Prof. Luis Ortiz Ortiz\\[2\baselineskip]
 \end{titlepage}
 
-\pagenumbering{roman}
+\clearpage\pagenumbering{roman}
+\setcounter{page}{2}
 \begin{table}[H]\centering
-\begin{tabular}{|c|c|c|c|}
-  \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+\begin{tabular}{|+>{\centering\arraybackslash}m{3.5cm}|^>{\centering\arraybackslash}m{3.5cm}|^>{\centering\arraybackslash}m{3.5cm}|^>{\centering\arraybackslash}m{3.5cm}|}
+    \hline
+    \rowstyle{\bfseries}
   Date & Version & Description & Author \\
    \hline
    10/03/2012 & 1.0 & First Draft & Yanilette Lopez Duprey \\
    \hline
 \end{tabular}
-\caption{Revision Table}
+\caption[]{Revision Table}
 \end{table}
 \pagebreak
 \tableofcontents
 \pagebreak
 \listoftables
 \pagebreak
+\listoffigures
 \clearpage\pagenumbering{arabic}
-
+\floatstyle{boxed}
+\restylefloat{figure}
 \section{Introduction}
 
 \subsection{Purpose}
@@ -70,11 +86,12 @@
 
 \subsection{Scope}
 
-This document will explain the methods used to text each of the procedures necessary to fulfill the requirements described for Artificial Intelligence Image Processing Segmentation (AIIP/S) in the Software Requirements Specifications (SRS) document for our software Smart Ice. These procedures are explained in detail in the Software Design Description (SDD) document. The procedures that will be tested in this document are:
+This document will explain the methods used to text each of the procedures necessary to fulfill the requirements described for Artificial Intelligence Image Processing Segmentation (AIIP/S) in the Software Requirements Specifications (SRS) document for our software Smart Eyesight. These procedures are explained in detail in the Software Design Description (SDD) document. The procedures that will be tested in this document are:
 
 \begin{itemize}
-  \item Probabilistic Neural Network (PNN)
-  \item Image Segmentation (IS)
+  \item Image Processing
+  \item Neural Network Training
+  \item Image Classification
 \end{itemize}
 
 The methods that are going to be used to test each of the procedures and/or functions mentioned above are:
@@ -95,30 +112,36 @@ The methods that are going to be used to test each of the procedures and/or func
 \subsection{Definitions and Acronyms}
 This subsection shall define, or provide references to the definition of all terms and acronyms required to properly interpreted the SPMP.
 \begin{table}[H]\centering
-\begin{tabular}{|c|c|}
+\begin{tabular}{|+>{\centering\arraybackslash}m{7cm}|^>{\centering\arraybackslash}m{7cm}|}
   \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   \rowstyle{\bfseries}%
   Term & Definition \\
    \hline
-   Software & Smart Ice code\\
+   The Company & AIIP/S \\
+   \hline
+   Software & Image Segmentation/Processing working code\\
+   \hline
+   Proposal & DARPA Proposal\\
    \hline
 \end{tabular}
 \caption{Definitions}
 \end{table}
 
 \begin{table}[H]\centering
-\begin{tabular}{|c|c|}
+\begin{tabular}{|+>{\centering\arraybackslash}m{7cm}|^>{\centering\arraybackslash}m{7cm}|}
   \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  \rowstyle{\bfseries}
   Term & Acronym \\
    \hline
-   AIIPS & Artificial Intelligence and Image Processing/Segmentation   \\
+   AIIP/S & Artificial Intelligence and Image Processing/Segmentation   \\
     \hline
     PNN & Probabilistic Neural Network \\
     \hline
   Defense Advanced Research Projects Agency  & DARPA \\
    \hline
   Software Requirements Specification & SRS \\
+   \hline
+    Software Project Management Plan & SPMP \\
    \hline
      Software Test Document & STD \\
    \hline
@@ -130,6 +153,7 @@ This subsection shall define, or provide references to the definition of all ter
 \caption{Acronyms}
 \end{table}
 
+
 \subsection{References}
 IEE Std 610.12-1990, IEEE Standard Glossary of Software Engineering Terminology.
 
@@ -137,25 +161,190 @@ IEE Std 610.12-1990, IEEE Standard Glossary of Software Engineering Terminology.
 The software Smart Ice has the functionality of receive an image then the image is segment and classified and produces an output as was explained in the SRS. These two functions that were mentioned on the scope (section 1.2) will need to be test:
 
 \begin{itemize}
-  \item 150 images with different histogram colors and forms.
+  \item A stream of 150 images with different histogram colors and forms incoming from a tagged database and a UV video.
+  \item Linux Cluster
 \end{itemize}
 
 \section{Test Plan}
 The test plan is necessary in order to archive a better “life” for the product. This plan will detail which test would be done as follow:
 
-\begin{table}[H]\centering
-\begin{tabular}{|c|c|}
-  \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-    System Function & Test \\
-   \hline
-   Image Segmentation  & \\
-   \hline
-    Image Classification  & \\
-   \hline
-\end{tabular}
-\caption{Definitions}
-\end{table}
+\begin{itemize}
+  \item Image Processing
+    \begin{itemize}
+  \item Read image
+  \item Segment image
+  \item Write image
+  \item Extract Features
+    \end{itemize}
+  \item Neural Network training
+  \item Image Classification
+\end{itemize}
+\section{Test Design Specification}
+This section of the STD specifies what is the requirement and function to be tested,  the method to be use (mentioned in section 1.2) and under what conditions the test will be implemented. The conditions can be different ways for implementing a test and/or performance requirements. The requirements and function are in full detail in the SRS and SDD, respectively.
+\subsection{Test 1}
 
+\subsubsection{Test design specification Identifier}
+Test that the image from the UV video stream and tagged database were received (size).
+\subsubsection{Function to be tested}
+Image Processing: Read Image
+\subsubsection{Method to be use}
+Unit test: White Box
+\subsubsection{Condition for the test}
+\begin{itemize}
+\item Receive an image from UV video stream and tagged Database)
+    \end{itemize}
+\subsection{Test 2}
+
+\subsubsection{Test design specification Identifier}
+Test if the image read was correctly segmented.
+\subsubsection{Function to be tested}
+Image Processing: Segment Image
+\subsubsection{Method to be use}
+Unit test: White Box
+\subsubsection{Condition for the test}
+Segment the image using Finding Region In the Picture(FRIP)
+\subsection{Test 3}
+
+\subsubsection{Test design specification Identifier}
+Test that the image was save in the array.
+\subsubsection{Function to be tested}
+Image Processing: Write Image
+\subsubsection{Method to be use}
+Unit test: White Box
+\subsubsection{Condition for the test}
+\begin{itemize}
+\item Write the segmented image in the write image array.
+    \end{itemize}
+\subsection{Test 4}
+
+\subsubsection{Test design specification Identifier}
+Test that the feature vector was created.
+\subsubsection{Function to be tested}
+Image Processing: Extract Features
+\subsubsection{Method to be use}
+Unit test: White Box
+\subsubsection{Condition for the test}
+\begin{itemize}
+\item Use the segmented region to extract the five features
+    \begin{itemize}
+    \item Color
+    \item Texture
+    \item Scale
+    \item Location
+    \item Shape
+    \end{itemize}
+    \item Create a feature vector
+    \end{itemize}
+\subsection{Test 5}
+
+\subsubsection{Test design specification Identifier}
+Test that the re-weighting pattern nodes per each region is working for the training of the PNN with the output index. (learn the characteristic and properties of each image).
+\subsubsection{Function to be tested}
+Neural Network Training
+\subsubsection{Method to be use}
+Unit test: White Box
+\subsubsection{Condition for the test}
+\begin{enumerate}
+  \item The feature vector extracted of the image from the tagged database in the Image Processing was received.
+  \item Input feature vector from the Image Processing.
+\end{enumerate}
+\subsection{Test 6}
+
+Test if the trained PNN classified correctly the segmented image
+\subsubsection{Function to be tested}
+Image Classification
+\subsubsection{Method to be use}
+Unit test: White Box
+\subsubsection{Condition for the test}
+Use the features extracted from the UV stream image obtained in the Image Processing.
+Use the trained PNN (output index).
+\section{Test Description}
+
+This section describes which data will be use for each test, the expected results and the procedure of the implementation of the test. The results in this section depends of the conditions for the test described in section 4and the data used for this section.
+
+\subsection{Test 1}
+\subsubsection{Test Data}
+The data for this test is images from the UV video stream and tagged Database
+
+\subsubsection{Expected Results}
+In consideration with the conditions mentioned 4.1.4 and 5.1.1 the images from the UV video stream and the images from the tagged database were received in other words the image was read.
+
+\subsubsection{Test Procedure}
+ \begin{enumerate}
+  \item Output the variable that contains the image that was received
+  \end{enumerate}
+
+\subsection{Test 2}
+\subsubsection{Test Data}
+The data for this test is images from the UV video stream and tagged Database.
+
+\subsubsection{Expected Results}
+In consideration with the conditions mentioned 4.1.4 and 5.1.1 the images from the UV video stream and the images from the tagged database were segmented correctly.
+\subsubsection{Test Procedure}
+ \begin{enumerate}
+  \item Output the variable that contains the segmented image.
+  \end{enumerate}
+\subsection{Test 3}
+\subsubsection{Test Data}
+The data for this test is images from the UV video stream and tagged Database segmented using the FRIP.
+
+\subsubsection{Expected Results}
+In consideration with the conditions mentioned 4.1.4 and 5.1.1 the images from the UV video stream and the images from the tagged database segmented were save in the write image array.
+\subsubsection{Test Procedure}
+\begin{enumerate}
+  \item Output the variable in the array that contains the segmented image.
+  \end{enumerate}
+\subsection{Test 4}
+\subsubsection{Test Data}
+The data for this test is images from the UV video stream and tagged Database
+
+\subsubsection{Expected Results}
+In consideration with the conditions mentioned 4.1.4 and 5.1.1 the five features extracted from the images of the UV video stream and the images from the tagged database were converted and normalized in a feature vector.
+
+\subsubsection{Test Procedure}
+\begin{enumerate}
+  \item Output the five features:
+  \begin{itemize}
+  \item Color
+  \item Texture
+  \item Scale
+  \item Location
+  \item Shape
+  \end{itemize}
+  \item Output feature vector.
+  \end{enumerate}
+
+\subsection{Test 5}
+\subsubsection{Test Data}
+The data for this test is the feature vector extracted from the tagged Database images in the Image Processing.
+
+\subsubsection{Expected Results}
+In consideration with the conditions mentioned 4.1.4 and 5.1.1 PNN learned the characteristics and properties of each image.
+\subsubsection{Test Procedure}
+\begin{enumerate}
+  \item Output the index.
+  \end{enumerate}
+\subsection{Test 6}
+\subsubsection{Test Data}
+The data for this test is the feature vector extracted of the image from the UV video stream obtained in the Image Processing.
+
+\subsubsection{Expected Results}
+In consideration with the conditions mentioned 4.1.4 and 5.1.1 the PNN will classify the feature vector comparing it with every pattern weights.
+
+\subsubsection{Test Procedure}
+\begin{enumerate}
+  \item Output the index.
+  \end{enumerate}
+\subsection{Performance Test}
+This section describe the test that are going to be executed for the complete system. This test will be executed after each test describe in sections 4 and 5.
+
+\subsubsection{Stress}
+\subsubsection{Load}
+\subsubsection{Endurance}
+\subsubsection{Spike}
+\subsubsection{Scalability}
+\subsubsection{Isolation}
 
 \end{document}
+
+
