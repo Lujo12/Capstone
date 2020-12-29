@@ -1,0 +1,14 @@
+create variable firstName
+request user input
+store user input in firstName
+print out first_name
+along with the pharase " Hello World"
+create variable age
+request user input
+store user input in age
+if age is 18 or over 
+print "You're old enough"
+if age is 16 or less than 18
+print "Almost there"
+if age is 16 or less than 16
+print "You're just too young"
